@@ -22,6 +22,14 @@ class PullRequestMenuItem: NSMenuItem {
         self.target = self
     }
     
+    static func ==(lhs: PullRequestMenuItem, rhs: PullRequestMenuItem) -> Bool {
+        return lhs.item == rhs.item
+    }
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        return item == (object as? PullRequestMenuItem)?.item
+    }
+    
     @objc
     func onSelect(_ sender: NSMenuItem) {
         let command = ["open", self.item.htmlUrl.absoluteString]

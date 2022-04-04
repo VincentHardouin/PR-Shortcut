@@ -41,24 +41,45 @@ class Menu: NSMenu, NSMenuDelegate {
     }
     
     func menuWillOpen(_ menu: NSMenu) {
+       refreshMenu()
+    }
+    
+    func refreshMenu() {
         githubService.getPullRequest() { [weak self] result in
             switch result {
             case .failure(let error):
                 print(error)
             case .success(let pullRequests):
-                self?.clearAll()
-                
-                var newPullRequestMenuItems: [PullRequestMenuItem] = []
-                
-                for pullRequest in pullRequests.reversed() {
-                    let item = PullRequestMenuItem(item: pullRequest)
-                    self?.insertItem(item, at: 0)
-                    newPullRequestMenuItems.append(item)
-                }
-                
-                self?.currentPullRequestMenuItems = newPullRequestMenuItems
+                self?.updateItems(pullRequests: pullRequests)
             }
         }
+    }
+    
+    func updateItems(pullRequests: [PullRequest]) {
+        var newItems: [PullRequestMenuItem] = []
+        for pullRequest in pullRequests.reversed() {
+            let item = PullRequestMenuItem(item: pullRequest)
+            if self.items.contains(item) {
+                if let currentItem = self.items.first(where: { $0 == item && $0.title != item.title }) {
+                    let index = index(of: currentItem)
+                    self.removeItem(at: index)
+                    self.insertItem(item, at: index)
+                }
+            } else {
+                self.insertItem(item, at: 0)
+            }
+            newItems.append(item)
+        }
+        
+        self.removeUselessPullRequest(newItems: newItems)
+        self.currentPullRequestMenuItems = newItems
+    }
+    
+    func removeUselessPullRequest(newItems: [PullRequestMenuItem]) {
+        let itemsToBeRemoved = currentPullRequestMenuItems.filter({ currentItem in
+            return !newItems.contains(currentItem)
+        })
+        clear(itemsToBeRemoved)
     }
     
     func clearAll() {
@@ -68,7 +89,7 @@ class Menu: NSMenu, NSMenuDelegate {
     private func clear(_ itemsToClear: [PullRequestMenuItem]) {
         itemsToClear.forEach({ menuItem in
           if items.contains(menuItem) {
-            removeItem(menuItem)
+            removeItem(at: index(of: menuItem))
           }
         })
     }

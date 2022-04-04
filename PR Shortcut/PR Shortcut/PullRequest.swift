@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PullRequest: Codable {
+struct PullRequest: Codable, Equatable {
     enum CodingKeys: String, CodingKey {
         case htmlUrl = "html_url"
         case repositoryUrl = "repository_url"
@@ -19,4 +19,9 @@ struct PullRequest: Codable {
     let title: String
     let htmlUrl: URL
     let repositoryUrl: URL
+    
+    
+    static func ==(lhs: PullRequest, rhs: PullRequest) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
