@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC39302527FF4EF600E1CA6E /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = BC39302427FF4EF600E1CA6E /* Preferences */; };
 		BC58CC8E27F84E8F00B4D668 /* PR_ShortcutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CC8D27F84E8F00B4D668 /* PR_ShortcutApp.swift */; };
 		BC58CC9227F84E9200B4D668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58CC9127F84E9200B4D668 /* Assets.xcassets */; };
 		BC58CC9527F84E9200B4D668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58CC9427F84E9200B4D668 /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		BC71F34F27F8EB4E00C3765E /* PRShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71F34E27F8EB4E00C3765E /* PRShortcut.swift */; };
 		BC71F35127F9857400C3765E /* PullRequestMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71F35027F9857400C3765E /* PullRequestMenuItem.swift */; };
 		BC71F35327F98D2800C3765E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71F35227F98D2800C3765E /* Utilities.swift */; };
+		BCB4EDB4280022A40066A0AA /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = BCB4EDB3280022A40066A0AA /* Preferences */; };
 		BCE9482B27F895FA00A39748 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9482A27F895FA00A39748 /* PullRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC39302527FF4EF600E1CA6E /* Preferences in Frameworks */,
+				BCB4EDB4280022A40066A0AA /* Preferences in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC504FC3280068B7007FC732 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC71F34A27F8E00C00C3765E /* GitHubSearchResponse.swift */,
+				BCE9482A27F895FA00A39748 /* PullRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BC58CC8127F84E8F00B4D668 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +108,9 @@
 				BC58CCA827F84E9200B4D668 /* PR ShortcutUITests */,
 				BC58CC8B27F84E8F00B4D668 /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		BC58CC8B27F84E8F00B4D668 /* Products */ = {
 			isa = PBXGroup;
@@ -110,6 +125,7 @@
 		BC58CC8C27F84E8F00B4D668 /* PR Shortcut */ = {
 			isa = PBXGroup;
 			children = (
+				BC504FC3280068B7007FC732 /* Model */,
 				BC71F34C27F8EA3500C3765E /* Menu.swift */,
 				BC58CCBA27F8717B00B4D668 /* PR-Shortcut-Info.plist */,
 				BC58CC8D27F84E8F00B4D668 /* PR_ShortcutApp.swift */,
@@ -117,9 +133,7 @@
 				BC58CC9627F84E9200B4D668 /* PR_Shortcut.entitlements */,
 				BC58CC9327F84E9200B4D668 /* Preview Content */,
 				BC58CCBB27F871EB00B4D668 /* AppDelegate.swift */,
-				BCE9482A27F895FA00A39748 /* PullRequest.swift */,
 				BC71F34827F8DF5600C3765E /* GitHubService.swift */,
-				BC71F34A27F8E00C00C3765E /* GitHubSearchResponse.swift */,
 				BC71F34E27F8EB4E00C3765E /* PRShortcut.swift */,
 				BC71F35027F9857400C3765E /* PullRequestMenuItem.swift */,
 				BC71F35227F98D2800C3765E /* Utilities.swift */,
@@ -168,6 +182,10 @@
 			dependencies = (
 			);
 			name = "PR Shortcut";
+			packageProductDependencies = (
+				BC39302427FF4EF600E1CA6E /* Preferences */,
+				BCB4EDB3280022A40066A0AA /* Preferences */,
+			);
 			productName = "PR Shortcut";
 			productReference = BC58CC8A27F84E8F00B4D668 /* PR Shortcut.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +258,9 @@
 				Base,
 			);
 			mainGroup = BC58CC8127F84E8F00B4D668;
+			packageReferences = (
+				BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */,
+			);
 			productRefGroup = BC58CC8B27F84E8F00B4D668 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,6 +351,8 @@
 		BC58CCAD27F84E9200B4D668 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -390,6 +413,8 @@
 		BC58CCAE27F84E9200B4D668 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -434,6 +459,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -443,8 +469,11 @@
 		BC58CCB027F84E9200B4D668 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_ENTITLEMENTS = "PR Shortcut/PR_Shortcut.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +490,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "vincenthardouin.PR-Shortcut";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -471,8 +501,11 @@
 		BC58CCB127F84E9200B4D668 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_ENTITLEMENTS = "PR Shortcut/PR_Shortcut.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +522,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "vincenthardouin.PR-Shortcut";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -604,6 +638,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Preferences";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC39302427FF4EF600E1CA6E /* Preferences */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */;
+			productName = Preferences;
+		};
+		BCB4EDB3280022A40066A0AA /* Preferences */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */;
+			productName = Preferences;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC58CC8227F84E8F00B4D668 /* Project object */;
 }
