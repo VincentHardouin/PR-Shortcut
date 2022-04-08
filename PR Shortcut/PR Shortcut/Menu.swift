@@ -61,9 +61,7 @@ class Menu: NSMenu, NSMenuDelegate {
             let item = PullRequestMenuItem(item: pullRequest)
             if self.items.contains(item) {
                 if let currentItem = self.items.first(where: { $0 == item && $0.title != item.title }) {
-                    let index = index(of: currentItem)
-                    self.removeItem(at: index)
-                    self.insertItem(item, at: index)
+                    self.updateItem(currentItem: currentItem, newItem: item)
                 }
             } else {
                 self.insertItem(item, at: 0)
@@ -75,11 +73,21 @@ class Menu: NSMenu, NSMenuDelegate {
         self.currentPullRequestMenuItems = newItems
     }
     
+    func updateItem(currentItem: NSMenuItem, newItem: PullRequestMenuItem) {
+        let index = index(of: currentItem)
+        self.removeItem(at: index)
+        self.insertItem(newItem, at: index)
+    }
+    
     func removeUselessPullRequest(newItems: [PullRequestMenuItem]) {
-        let itemsToBeRemoved = currentPullRequestMenuItems.filter({ currentItem in
-            return !newItems.contains(currentItem)
-        })
-        clear(itemsToBeRemoved)
+        let itemsToBeRemoved = _findItemsToBeRemove(currentItems: currentPullRequestMenuItems, newItems: newItems);
+        clear(itemsToBeRemoved);
+    }
+    
+    func _findItemsToBeRemove(currentItems: [PullRequestMenuItem], newItems: [PullRequestMenuItem]) -> [PullRequestMenuItem] {
+        return currentItems.filter({ currentItem in
+           return !newItems.contains(currentItem)
+       })
     }
     
     func clearAll() {
