@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC39302527FF4EF600E1CA6E /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = BC39302427FF4EF600E1CA6E /* Preferences */; };
+		BC504FC928007DEC007FC732 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = BC504FC828007DEC007FC732 /* Preferences */; };
 		BC58CC8E27F84E8F00B4D668 /* PR_ShortcutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CC8D27F84E8F00B4D668 /* PR_ShortcutApp.swift */; };
 		BC58CC9227F84E9200B4D668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58CC9127F84E9200B4D668 /* Assets.xcassets */; };
 		BC58CC9527F84E9200B4D668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58CC9427F84E9200B4D668 /* Preview Assets.xcassets */; };
@@ -21,7 +21,6 @@
 		BC71F34F27F8EB4E00C3765E /* PRShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71F34E27F8EB4E00C3765E /* PRShortcut.swift */; };
 		BC71F35127F9857400C3765E /* PullRequestMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71F35027F9857400C3765E /* PullRequestMenuItem.swift */; };
 		BC71F35327F98D2800C3765E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71F35227F98D2800C3765E /* Utilities.swift */; };
-		BCB4EDB4280022A40066A0AA /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = BCB4EDB3280022A40066A0AA /* Preferences */; };
 		BCE9482B27F895FA00A39748 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9482A27F895FA00A39748 /* PullRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC39302527FF4EF600E1CA6E /* Preferences in Frameworks */,
-				BCB4EDB4280022A40066A0AA /* Preferences in Frameworks */,
+				BC504FC928007DEC007FC732 /* Preferences in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,8 +181,7 @@
 			);
 			name = "PR Shortcut";
 			packageProductDependencies = (
-				BC39302427FF4EF600E1CA6E /* Preferences */,
-				BCB4EDB3280022A40066A0AA /* Preferences */,
+				BC504FC828007DEC007FC732 /* Preferences */,
 			);
 			productName = "PR Shortcut";
 			productReference = BC58CC8A27F84E8F00B4D668 /* PR Shortcut.app */;
@@ -259,7 +256,7 @@
 			);
 			mainGroup = BC58CC8127F84E8F00B4D668;
 			packageReferences = (
-				BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */,
+				BC504FC728007DEC007FC732 /* XCRemoteSwiftPackageReference "Preferences" */,
 			);
 			productRefGroup = BC58CC8B27F84E8F00B4D668 /* Products */;
 			projectDirPath = "";
@@ -352,14 +349,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(EMBEDDED_CONTENT_CONTAINS_SWIFT)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -379,34 +377,54 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				FRAMEWORK_SEARCH_PATHS = (
+					"${PROJECT_DIR}/**",
+					"/System/Library/PrivateFrameworks/**",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"${inherited}",
+					"@executable_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "${inehrited}";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -414,14 +432,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(EMBEDDED_CONTENT_CONTAINS_SWIFT)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -441,28 +460,47 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				FRAMEWORK_SEARCH_PATHS = (
+					"${PROJECT_DIR}/**",
+					"/System/Library/PrivateFrameworks/**",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"${inherited}",
+					"@executable_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
@@ -490,7 +528,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "vincenthardouin.PR-Shortcut";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -640,25 +678,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */ = {
+		BC504FC728007DEC007FC732 /* XCRemoteSwiftPackageReference "Preferences" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Preferences";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BC39302427FF4EF600E1CA6E /* Preferences */ = {
+		BC504FC828007DEC007FC732 /* Preferences */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */;
-			productName = Preferences;
-		};
-		BCB4EDB3280022A40066A0AA /* Preferences */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC39302327FF4EF600E1CA6E /* XCRemoteSwiftPackageReference "Preferences" */;
+			package = BC504FC728007DEC007FC732 /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Preferences;
 		};
 /* End XCSwiftPackageProductDependency section */
