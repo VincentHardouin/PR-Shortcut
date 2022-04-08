@@ -106,9 +106,9 @@
 				BC58CCA827F84E9200B4D668 /* PR ShortcutUITests */,
 				BC58CC8B27F84E8F00B4D668 /* Products */,
 			);
-			indentWidth = 4;
+			indentWidth = 2;
 			sourceTree = "<group>";
-			tabWidth = 4;
+			tabWidth = 2;
 		};
 		BC58CC8B27F84E8F00B4D668 /* Products */ = {
 			isa = PBXGroup;
@@ -171,6 +171,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC58CCAF27F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PR Shortcut" */;
 			buildPhases = (
+				BC504FCA28008392007FC732 /* [FORMAT] Run SwiftFormat */,
+				BC504FCB280083B5007FC732 /* [LINT] Run SwiftLint */,
 				BC58CC8627F84E8F00B4D668 /* Sources */,
 				BC58CC8727F84E8F00B4D668 /* Frameworks */,
 				BC58CC8827F84E8F00B4D668 /* Resources */,
@@ -294,6 +296,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC504FCA28008392007FC732 /* [FORMAT] Run SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[FORMAT] Run SwiftFormat";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\" >&2\nfi\n";
+		};
+		BC504FCB280083B5007FC732 /* [LINT] Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[LINT] Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" >&2\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC58CC8627F84E8F00B4D668 /* Sources */ = {
