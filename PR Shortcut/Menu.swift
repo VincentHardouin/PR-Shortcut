@@ -31,13 +31,6 @@ class Menu: NSMenu, NSMenuDelegate {
     super.init(title: "PR Shortcut")
     self.githubService = GithubService()
     self.delegate = self
-
-    self.populateFooter()
-  }
-
-  func populateFooter() {
-    self.addItem(NSMenuItem.separator())
-    self.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
   }
 
   func menuWillOpen(_: NSMenu) {
