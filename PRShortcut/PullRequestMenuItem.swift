@@ -10,13 +10,14 @@ import Foundation
 
 class PullRequestMenuItem: NSMenuItem {
   public var item: PullRequest!
+  private let titleMaxLength = 50
 
   required init(coder: NSCoder) {
     super.init(coder: coder)
   }
 
   init(item: PullRequest) {
-    super.init(title: item.title, action: #selector(self.onSelect(_:)), keyEquivalent: "")
+    super.init(title: item.title.shortened(to: self.titleMaxLength), action: #selector(self.onSelect(_:)), keyEquivalent: "")
     self.item = item
     self.target = self
   }
