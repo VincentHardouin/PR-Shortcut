@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC011EAA2801CA9B00233C59 /* Defaults+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC011EA92801CA9B00233C59 /* Defaults+Configuration.swift */; };
+		BC011EAD2801CAF400233C59 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = BC011EAC2801CAF400233C59 /* Defaults */; };
+		BC011EAF2801CE7B00233C59 /* GeneralPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC011EAE2801CE7B00233C59 /* GeneralPreference.swift */; };
+		BC011EB12801DC2100233C59 /* String+Shortened.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC011EB02801DC2100233C59 /* String+Shortened.swift */; };
 		BC2F3CD52800930A00E1D019 /* GeneralPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F3CD42800930A00E1D019 /* GeneralPreferenceViewController.swift */; };
 		BC2F3CD92801845200E1D019 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BC2F3CD82801845200E1D019 /* LICENSE */; };
 		BC2F3CDB2801846100E1D019 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2F3CDA2801846100E1D019 /* README.md */; };
@@ -15,7 +19,6 @@
 		BC2F3CE32801849F00E1D019 /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = BC2F3CDF2801849F00E1D019 /* .swiftformat */; };
 		BC2F3CE5280185E800E1D019 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BC2F3CE4280185E800E1D019 /* .swiftlint.yml */; };
 		BC2F3CE72801873400E1D019 /* PreferencePane.Identifier+Panes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F3CE62801873400E1D019 /* PreferencePane.Identifier+Panes.swift */; };
-		BC2F3CE92801906800E1D019 /* GeneralPreferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2F3CE82801906800E1D019 /* GeneralPreferenceViewController.xib */; };
 		BC504FC928007DEC007FC732 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = BC504FC828007DEC007FC732 /* Preferences */; };
 		BC58CC8E27F84E8F00B4D668 /* PR_ShortcutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CC8D27F84E8F00B4D668 /* PR_ShortcutApp.swift */; };
 		BC58CC9227F84E9200B4D668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC58CC9127F84E9200B4D668 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC011EA92801CA9B00233C59 /* Defaults+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Configuration.swift"; sourceTree = "<group>"; };
+		BC011EAE2801CE7B00233C59 /* GeneralPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreference.swift; sourceTree = "<group>"; };
+		BC011EB02801DC2100233C59 /* String+Shortened.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Shortened.swift"; sourceTree = "<group>"; };
 		BC2F3CD42800930A00E1D019 /* GeneralPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferenceViewController.swift; sourceTree = "<group>"; };
 		BC2F3CD82801845200E1D019 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		BC2F3CDA2801846100E1D019 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -59,7 +65,6 @@
 		BC2F3CDF2801849F00E1D019 /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		BC2F3CE4280185E800E1D019 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		BC2F3CE62801873400E1D019 /* PreferencePane.Identifier+Panes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreferencePane.Identifier+Panes.swift"; sourceTree = "<group>"; };
-		BC2F3CE82801906800E1D019 /* GeneralPreferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferenceViewController.xib; sourceTree = "<group>"; };
 		BC58CC8A27F84E8F00B4D668 /* PRShortcut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRShortcut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58CC8D27F84E8F00B4D668 /* PR_ShortcutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PR_ShortcutApp.swift; sourceTree = "<group>"; };
 		BC58CC9127F84E9200B4D668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC011EAD2801CAF400233C59 /* Defaults in Frameworks */,
 				BC504FC928007DEC007FC732 /* Preferences in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,12 +113,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC011EAB2801CAF400233C59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC2F3CD628017B5400E1D019 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
 				BC2F3CD42800930A00E1D019 /* GeneralPreferenceViewController.swift */,
-				BC2F3CE82801906800E1D019 /* GeneralPreferenceViewController.xib */,
 				BC2F3CE62801873400E1D019 /* PreferencePane.Identifier+Panes.swift */,
+				BC011EAE2801CE7B00233C59 /* GeneralPreference.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 				BC58CC9E27F84E9200B4D668 /* PRShortcutTests */,
 				BC58CCA827F84E9200B4D668 /* PRShortcutUITests */,
 				BC58CC8B27F84E8F00B4D668 /* Products */,
+				BC011EAB2801CAF400233C59 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -178,6 +192,8 @@
 				BC71F34E27F8EB4E00C3765E /* PRShortcut.swift */,
 				BC71F35027F9857400C3765E /* PullRequestMenuItem.swift */,
 				BC71F35227F98D2800C3765E /* Utilities.swift */,
+				BC011EA92801CA9B00233C59 /* Defaults+Configuration.swift */,
+				BC011EB02801DC2100233C59 /* String+Shortened.swift */,
 			);
 			path = PRShortcut;
 			sourceTree = "<group>";
@@ -227,6 +243,7 @@
 			name = PRShortcut;
 			packageProductDependencies = (
 				BC504FC828007DEC007FC732 /* Preferences */,
+				BC011EAC2801CAF400233C59 /* Defaults */,
 			);
 			productName = "PR Shortcut";
 			productReference = BC58CC8A27F84E8F00B4D668 /* PRShortcut.app */;
@@ -302,6 +319,7 @@
 			mainGroup = BC58CC8127F84E8F00B4D668;
 			packageReferences = (
 				BC504FC728007DEC007FC732 /* XCRemoteSwiftPackageReference "Preferences" */,
+				BC011EA72801C85900233C59 /* XCRemoteSwiftPackageReference "Defaults" */,
 			);
 			productRefGroup = BC58CC8B27F84E8F00B4D668 /* Products */;
 			projectDirPath = "";
@@ -321,7 +339,6 @@
 			files = (
 				BC2F3CE5280185E800E1D019 /* .swiftlint.yml in Resources */,
 				BC2F3CE32801849F00E1D019 /* .swiftformat in Resources */,
-				BC2F3CE92801906800E1D019 /* GeneralPreferenceViewController.xib in Resources */,
 				BC2F3CD92801845200E1D019 /* LICENSE in Resources */,
 				BC58CC9527F84E9200B4D668 /* Preview Assets.xcassets in Resources */,
 				BC2F3CDB2801846100E1D019 /* README.md in Resources */,
@@ -396,10 +413,13 @@
 				BC71F34B27F8E00C00C3765E /* GitHubSearchResponse.swift in Sources */,
 				BC2F3CD52800930A00E1D019 /* GeneralPreferenceViewController.swift in Sources */,
 				BC71F34927F8DF5600C3765E /* GitHubService.swift in Sources */,
+				BC011EAF2801CE7B00233C59 /* GeneralPreference.swift in Sources */,
 				BC58CCBC27F871EB00B4D668 /* AppDelegate.swift in Sources */,
+				BC011EAA2801CA9B00233C59 /* Defaults+Configuration.swift in Sources */,
 				BCE9482B27F895FA00A39748 /* PullRequest.swift in Sources */,
 				BC58CC8E27F84E8F00B4D668 /* PR_ShortcutApp.swift in Sources */,
 				BC71F35327F98D2800C3765E /* Utilities.swift in Sources */,
+				BC011EB12801DC2100233C59 /* String+Shortened.swift in Sources */,
 				BC71F35127F9857400C3765E /* PullRequestMenuItem.swift in Sources */,
 				BC71F34F27F8EB4E00C3765E /* PRShortcut.swift in Sources */,
 			);
@@ -610,7 +630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PR Shortcut/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PRShortcut/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S2LMH9TF5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -642,7 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PR Shortcut/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PRShortcut/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S2LMH9TF5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -709,7 +729,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "PR Shortcut";
+				TEST_TARGET_NAME = PRShortcut;
 			};
 			name = Debug;
 		};
@@ -725,7 +745,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "PR Shortcut";
+				TEST_TARGET_NAME = PRShortcut;
 			};
 			name = Release;
 		};
@@ -771,6 +791,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BC011EA72801C85900233C59 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.1;
+			};
+		};
 		BC504FC728007DEC007FC732 /* XCRemoteSwiftPackageReference "Preferences" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Preferences";
@@ -782,6 +810,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BC011EAC2801CAF400233C59 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC011EA72801C85900233C59 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
 		BC504FC828007DEC007FC732 /* Preferences */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BC504FC728007DEC007FC732 /* XCRemoteSwiftPackageReference "Preferences" */;

@@ -1,22 +1,21 @@
-//
-//  GitHubService.swift
-//  PR Shortcut
-//
-//  Created by Vincent Hardouin on 02/04/2022.
-//
-
+import Defaults
 import Foundation
 
 enum GitHubServiceError: Error {
   case noDataAvailable
   case canNotProcessData
+  case usernameNotDefined
 }
 
 struct GithubService {
   let githubApiURL = "https://api.github.com"
 
   func getPullRequest(completion: @escaping (Result<[PullRequest], GitHubServiceError>) -> Void) {
-    let url = self.getUrlForSearch(author: "VincentHardouin")
+    if Defaults[.githubUsername] == "" {
+      completion(.failure(.usernameNotDefined))
+      return
+    }
+    let url = self.getUrlForSearch(author: Defaults[.githubUsername])
     let dataTask = URLSession.shared.dataTask(with: url!) { data, _, _ in
       guard let jsonData = data
       else {

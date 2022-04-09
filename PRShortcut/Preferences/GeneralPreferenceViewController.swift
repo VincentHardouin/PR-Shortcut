@@ -7,13 +7,14 @@ class GeneralPreferenceViewController: NSViewController, PreferencePane {
   public let preferencePaneTitle: String = "General"
   public let toolbarItemIcon = NSImage(systemSymbolName: "gearshape", accessibilityDescription: "General preferences")!
 
-  override var nibName: NSNib.Name? { "GeneralPreferenceViewController" }
+  override func loadView() {
+    let contentView = GeneralPreference()
+    let hostingView = NSHostingView(rootView: contentView)
 
-  @IBOutlet var launchAtLoginButton: NSButton!
+    self.view = hostingView
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    self.preferredContentSize = NSSize(width: 300, height: 300)
   }
 }

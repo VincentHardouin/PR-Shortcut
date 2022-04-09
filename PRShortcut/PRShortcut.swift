@@ -42,7 +42,6 @@ class PRShortcut: NSObject {
 
   @objc
   func openPreferences(_: NSMenuItem) {
-    print("coucou")
     self.preferencesWindowController.show()
   }
 }
