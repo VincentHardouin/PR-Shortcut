@@ -30,7 +30,6 @@ class PRShortcut: NSObject {
     guard let button = statusItem.button else { return }
     button.image = NSImage(named: NSImage.Name("StatusBarMenuImage"))
     self.statusItem.menu = self.menu
-    self.preferencesWindowController.show()
   }
 
   func populateFooter() {

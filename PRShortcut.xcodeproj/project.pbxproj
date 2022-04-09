@@ -60,14 +60,14 @@
 		BC2F3CE4280185E800E1D019 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		BC2F3CE62801873400E1D019 /* PreferencePane.Identifier+Panes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreferencePane.Identifier+Panes.swift"; sourceTree = "<group>"; };
 		BC2F3CE82801906800E1D019 /* GeneralPreferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferenceViewController.xib; sourceTree = "<group>"; };
-		BC58CC8A27F84E8F00B4D668 /* PR Shortcut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PR Shortcut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC58CC8A27F84E8F00B4D668 /* PRShortcut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRShortcut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58CC8D27F84E8F00B4D668 /* PR_ShortcutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PR_ShortcutApp.swift; sourceTree = "<group>"; };
 		BC58CC9127F84E9200B4D668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC58CC9427F84E9200B4D668 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC58CC9627F84E9200B4D668 /* PR_Shortcut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PR_Shortcut.entitlements; sourceTree = "<group>"; };
-		BC58CC9B27F84E9200B4D668 /* PR ShortcutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PR ShortcutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC58CC9B27F84E9200B4D668 /* PRShortcutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PRShortcutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58CC9F27F84E9200B4D668 /* PR_ShortcutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PR_ShortcutTests.swift; sourceTree = "<group>"; };
-		BC58CCA527F84E9200B4D668 /* PR ShortcutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PR ShortcutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC58CCA527F84E9200B4D668 /* PRShortcutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PRShortcutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC58CCA927F84E9200B4D668 /* PR_ShortcutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PR_ShortcutUITests.swift; sourceTree = "<group>"; };
 		BC58CCAB27F84E9200B4D668 /* PR_ShortcutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PR_ShortcutUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BC58CCBA27F8717B00B4D668 /* PR-Shortcut-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PR-Shortcut-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -143,9 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				BC2F3CD72801843F00E1D019 /* Misc */,
-				BC58CC8C27F84E8F00B4D668 /* PR Shortcut */,
-				BC58CC9E27F84E9200B4D668 /* PR ShortcutTests */,
-				BC58CCA827F84E9200B4D668 /* PR ShortcutUITests */,
+				BC58CC8C27F84E8F00B4D668 /* PRShortcut */,
+				BC58CC9E27F84E9200B4D668 /* PRShortcutTests */,
+				BC58CCA827F84E9200B4D668 /* PRShortcutUITests */,
 				BC58CC8B27F84E8F00B4D668 /* Products */,
 			);
 			indentWidth = 2;
@@ -155,14 +155,14 @@
 		BC58CC8B27F84E8F00B4D668 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC58CC8A27F84E8F00B4D668 /* PR Shortcut.app */,
-				BC58CC9B27F84E9200B4D668 /* PR ShortcutTests.xctest */,
-				BC58CCA527F84E9200B4D668 /* PR ShortcutUITests.xctest */,
+				BC58CC8A27F84E8F00B4D668 /* PRShortcut.app */,
+				BC58CC9B27F84E9200B4D668 /* PRShortcutTests.xctest */,
+				BC58CCA527F84E9200B4D668 /* PRShortcutUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC58CC8C27F84E8F00B4D668 /* PR Shortcut */ = {
+		BC58CC8C27F84E8F00B4D668 /* PRShortcut */ = {
 			isa = PBXGroup;
 			children = (
 				BC2F3CD628017B5400E1D019 /* Preferences */,
@@ -179,7 +179,7 @@
 				BC71F35027F9857400C3765E /* PullRequestMenuItem.swift */,
 				BC71F35227F98D2800C3765E /* Utilities.swift */,
 			);
-			path = "PR Shortcut";
+			path = PRShortcut;
 			sourceTree = "<group>";
 		};
 		BC58CC9327F84E9200B4D668 /* Preview Content */ = {
@@ -190,29 +190,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BC58CC9E27F84E9200B4D668 /* PR ShortcutTests */ = {
+		BC58CC9E27F84E9200B4D668 /* PRShortcutTests */ = {
 			isa = PBXGroup;
 			children = (
 				BC58CC9F27F84E9200B4D668 /* PR_ShortcutTests.swift */,
 			);
-			path = "PR ShortcutTests";
+			path = PRShortcutTests;
 			sourceTree = "<group>";
 		};
-		BC58CCA827F84E9200B4D668 /* PR ShortcutUITests */ = {
+		BC58CCA827F84E9200B4D668 /* PRShortcutUITests */ = {
 			isa = PBXGroup;
 			children = (
 				BC58CCA927F84E9200B4D668 /* PR_ShortcutUITests.swift */,
 				BC58CCAB27F84E9200B4D668 /* PR_ShortcutUITestsLaunchTests.swift */,
 			);
-			path = "PR ShortcutUITests";
+			path = PRShortcutUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC58CC8927F84E8F00B4D668 /* PR Shortcut */ = {
+		BC58CC8927F84E8F00B4D668 /* PRShortcut */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC58CCAF27F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PR Shortcut" */;
+			buildConfigurationList = BC58CCAF27F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PRShortcut" */;
 			buildPhases = (
 				BC504FCA28008392007FC732 /* [FORMAT] Run SwiftFormat */,
 				BC504FCB280083B5007FC732 /* [LINT] Run SwiftLint */,
@@ -224,17 +224,17 @@
 			);
 			dependencies = (
 			);
-			name = "PR Shortcut";
+			name = PRShortcut;
 			packageProductDependencies = (
 				BC504FC828007DEC007FC732 /* Preferences */,
 			);
 			productName = "PR Shortcut";
-			productReference = BC58CC8A27F84E8F00B4D668 /* PR Shortcut.app */;
+			productReference = BC58CC8A27F84E8F00B4D668 /* PRShortcut.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BC58CC9A27F84E9200B4D668 /* PR ShortcutTests */ = {
+		BC58CC9A27F84E9200B4D668 /* PRShortcutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC58CCB227F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PR ShortcutTests" */;
+			buildConfigurationList = BC58CCB227F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PRShortcutTests" */;
 			buildPhases = (
 				BC58CC9727F84E9200B4D668 /* Sources */,
 				BC58CC9827F84E9200B4D668 /* Frameworks */,
@@ -245,14 +245,14 @@
 			dependencies = (
 				BC58CC9D27F84E9200B4D668 /* PBXTargetDependency */,
 			);
-			name = "PR ShortcutTests";
+			name = PRShortcutTests;
 			productName = "PR ShortcutTests";
-			productReference = BC58CC9B27F84E9200B4D668 /* PR ShortcutTests.xctest */;
+			productReference = BC58CC9B27F84E9200B4D668 /* PRShortcutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BC58CCA427F84E9200B4D668 /* PR ShortcutUITests */ = {
+		BC58CCA427F84E9200B4D668 /* PRShortcutUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC58CCB527F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PR ShortcutUITests" */;
+			buildConfigurationList = BC58CCB527F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PRShortcutUITests" */;
 			buildPhases = (
 				BC58CCA127F84E9200B4D668 /* Sources */,
 				BC58CCA227F84E9200B4D668 /* Frameworks */,
@@ -263,9 +263,9 @@
 			dependencies = (
 				BC58CCA727F84E9200B4D668 /* PBXTargetDependency */,
 			);
-			name = "PR ShortcutUITests";
+			name = PRShortcutUITests;
 			productName = "PR ShortcutUITests";
-			productReference = BC58CCA527F84E9200B4D668 /* PR ShortcutUITests.xctest */;
+			productReference = BC58CCA527F84E9200B4D668 /* PRShortcutUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -291,7 +291,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BC58CC8527F84E8F00B4D668 /* Build configuration list for PBXProject "PR Shortcut" */;
+			buildConfigurationList = BC58CC8527F84E8F00B4D668 /* Build configuration list for PBXProject "PRShortcut" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -307,9 +307,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC58CC8927F84E8F00B4D668 /* PR Shortcut */,
-				BC58CC9A27F84E9200B4D668 /* PR ShortcutTests */,
-				BC58CCA427F84E9200B4D668 /* PR ShortcutUITests */,
+				BC58CC8927F84E8F00B4D668 /* PRShortcut */,
+				BC58CC9A27F84E9200B4D668 /* PRShortcutTests */,
+				BC58CCA427F84E9200B4D668 /* PRShortcutUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -427,12 +427,12 @@
 /* Begin PBXTargetDependency section */
 		BC58CC9D27F84E9200B4D668 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BC58CC8927F84E8F00B4D668 /* PR Shortcut */;
+			target = BC58CC8927F84E8F00B4D668 /* PRShortcut */;
 			targetProxy = BC58CC9C27F84E9200B4D668 /* PBXContainerItemProxy */;
 		};
 		BC58CCA727F84E9200B4D668 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BC58CC8927F84E8F00B4D668 /* PR Shortcut */;
+			target = BC58CC8927F84E8F00B4D668 /* PRShortcut */;
 			targetProxy = BC58CCA627F84E9200B4D668 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -605,7 +605,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
-				CODE_SIGN_ENTITLEMENTS = "PR Shortcut/PR_Shortcut.entitlements";
+				CODE_SIGN_ENTITLEMENTS = PRShortcut/PR_Shortcut.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -637,7 +637,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
-				CODE_SIGN_ENTITLEMENTS = "PR Shortcut/PR_Shortcut.entitlements";
+				CODE_SIGN_ENTITLEMENTS = PRShortcut/PR_Shortcut.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -675,7 +675,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PR Shortcut.app/Contents/MacOS/PR Shortcut";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PRShortcut.app/Contents/MacOS/PRShortcut";
 			};
 			name = Debug;
 		};
@@ -693,7 +693,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PR Shortcut.app/Contents/MacOS/PR Shortcut";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PRShortcut.app/Contents/MacOS/PRShortcut";
 			};
 			name = Release;
 		};
@@ -732,7 +732,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC58CC8527F84E8F00B4D668 /* Build configuration list for PBXProject "PR Shortcut" */ = {
+		BC58CC8527F84E8F00B4D668 /* Build configuration list for PBXProject "PRShortcut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC58CCAD27F84E9200B4D668 /* Debug */,
@@ -741,7 +741,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC58CCAF27F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PR Shortcut" */ = {
+		BC58CCAF27F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PRShortcut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC58CCB027F84E9200B4D668 /* Debug */,
@@ -750,7 +750,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC58CCB227F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PR ShortcutTests" */ = {
+		BC58CCB227F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PRShortcutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC58CCB327F84E9200B4D668 /* Debug */,
@@ -759,7 +759,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC58CCB527F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PR ShortcutUITests" */ = {
+		BC58CCB527F84E9200B4D668 /* Build configuration list for PBXNativeTarget "PRShortcutUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC58CCB627F84E9200B4D668 /* Debug */,
