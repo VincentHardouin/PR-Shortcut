@@ -92,8 +92,11 @@ class Menu: NSMenu, NSMenuDelegate {
 
   private func clear(_ itemsToClear: [PullRequestMenuItem]) {
     itemsToClear.forEach { menuItem in
-      if items.contains(menuItem) {
-        removeItem(at: index(of: menuItem))
+      if let item = item(withTitle: menuItem.title) {
+        let index = index(of: item)
+        if index >= 0 {
+          removeItem(at: index)
+        }
       }
     }
   }
