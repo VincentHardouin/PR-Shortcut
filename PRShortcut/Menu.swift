@@ -64,12 +64,21 @@ class Menu: NSMenu, NSMenuDelegate {
 
     self.removeUselessPullRequest(newItems: newItems)
     self.currentPullRequestMenuItems = newItems
+    self.updateKeyboardShortcuts()
   }
 
   func updateItem(currentItem: NSMenuItem, newItem: PullRequestMenuItem) {
     let index = index(of: currentItem)
     self.removeItem(at: index)
     self.insertItem(newItem, at: index)
+  }
+
+  func updateKeyboardShortcuts() {
+    let maxIndex = self.currentPullRequestMenuItems.count > 9 ? 9 : self.currentPullRequestMenuItems.count - 1
+    for i in 0 ... maxIndex {
+      let item = item(at: i)
+      item?.keyEquivalent = String(i + 1)
+    }
   }
 
   func removeUselessPullRequest(newItems: [PullRequestMenuItem]) {
