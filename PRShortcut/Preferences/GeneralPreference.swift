@@ -1,4 +1,5 @@
 import Defaults
+import LaunchAtLogin
 import SwiftUI
 
 struct GeneralPreference: View {
@@ -21,6 +22,8 @@ struct GeneralPreference: View {
           TextField("GitHub Token", text: $token)
           Text("Only if you want to see PRs in private reporitories (repo scope token only).")
         }
+
+        LaunchAtLogin.Toggle()
       }
     }.frame(width: 500, height: 300)
   }
